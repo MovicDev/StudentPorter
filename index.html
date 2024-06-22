@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Student_Portal</title>
+</head>
+<body class="bg-light">
+<div class="container mt-lg-5 mt-3 col-lg-7 col-10 rounded-3 p-3 mx-auto" style="border:3px solid black;">
+        <h3 class="text-center  text-decoration-underline text-dark">School Portal</h3>
+        <div class="alert alert-danger p-2 text-center bg-danger text-warning border-0 w-50 mx-auto my-3 animate__animated animate__flash animate__infinite animate__slow" style="display: none;" id="emptyErrorMessage">All spaces must be filled</div>
+        <div class="alert alert-success p-2 text-center bg-success text-dark border-0 w-50 mx-auto my-3 animate__animated animate__heartBeat animate__infinite animate__slow" style="display: none;" id="successMessage">Submitted successfully!</div>
+        <div class="my-3">
+        <label for="" class="fomr-label text-dark fw-bold">First Name:</label>
+        <input type="text" id="firstName" name="" class="form-control form-control-sm rounded-0 shadow-none ">
+    </div>
+    <div class="my-3">
+        <label for="" class="fomr-label text-dark fw-bold">Last Name:</label>
+        <input type="text" id="secondName" name="" class="form-control form-control-sm rounded-0 shadow-none ">
+    </div>
+        <div class="my-3">
+        <label for="" class="fomr-label text-dark fw-bold">Email/Phone Number:</label>
+        <input type="text" id="mailPhone" name="" class="form-control form-control-sm rounded-0 shadow-none ">
+</div>
+<div class="my-3">
+        <label for="" class="fomr-label text-dark fw-bold">Password:</label>
+        <input type="password" id="password" name="" class="form-control form-control-sm rounded-0 shadow-none ">
+        </div>
+        <button class="btn btn-dark w-100 my-3 rounded-0"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Submit</button>
+    </div>
+    <div class="container-fluid mx-auto col-lg-7 col-10 shadow-sm mt-lg-5 mt-2 p-3"  style="border:2px solid  black;">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                <th>S/n</th>
+                <th>FirstName</th>
+                <th>SecondName</th>
+                <th>Mail/Phone</th>
+                <th colspan="2">Actions</th>
+            </tr>
+            </thead>
+            <tbody id="display">  
+                <tr>
+                    <th colspan="5" class="text-center">No item added yet to store</th>
+                </tr>
+            </tbody>
+            
+            </table>
+    </div>  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="backdrop-filter: blur(10px);">
+    <div class="modal-dialog ">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-light text-center fw-bold" id="staticBackdropLabel">Confirmation!!!</h1>
+          <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-light" id="reg">
+         Are you sure you want to continue the registration
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-light fw-bold" onclick="submit()" data-bs-dismiss="modal">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Modal -->
+   <div class="modal fade" id="staticBackdropp" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="backdrop-filter: blur(10px);">
+    <div class="modal-dialog ">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-light text-center fw-bold" id="staticBackdropLabel">Edit User</h1>
+          <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-light">
+            <div class="my-3">
+              <p id="dis"></p>
+                <label for="" class="fomr-label text-light fw-bold">First Name:</label>
+                <input type="text" id="first" name="" class="form-control form-control-sm rounded-0 shadow-none ">
+            </div>
+            <div class="my-3">
+                <label for="" class="fomr-label text-light fw-bold">Last Name:</label>
+                <input type="text" id="second" name="" class="form-control form-control-sm rounded-0 shadow-none ">
+            </div>
+            <div class="my-3">
+                <label for="" class="fomr-label text-light fw-bold">Mail/Phone:</label>
+                <input type="text" id="phone" name="" class="form-control form-control-sm rounded-0 shadow-none ">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-light fw-bold"  onclick="update()" data-bs-dismiss="modal">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="script.js"></script>
+    <script src="bootstrap.js"></script>
+  
+</body>
+</html>
